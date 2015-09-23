@@ -7,6 +7,8 @@
 #COMMENTS // COLOR			#95A5A6 - LIGHT GREY
 #COMMENTS /**/ COLOR		#434F54	- DARK GREY
 
+#GUI generic
+gui.scalefactor = 2
 
 # GUI - STATUS
 status.notice.fgcolor = #002325
@@ -15,7 +17,7 @@ status.error.fgcolor = #FFFFFF
 status.error.bgcolor = #E34C00
 status.edit.fgcolor = #000000
 status.edit.bgcolor = #F1B500
-status.font = SansSerif,plain,12
+status.font = SansSerif,plain,24
 
 # GUI - TABS
 # settings for the tabs at the top
@@ -23,10 +25,10 @@ status.font = SansSerif,plain,12
 header.bgcolor = #17A1A5
 header.text.selected.color = #005B5B
 header.text.unselected.color = #007e82
-header.text.font = SansSerif,plain,12
+header.text.font = SansSerif,plain,24
 
 # GUI - CONSOLE
-console.font = Monospaced,plain,11
+console.font = Monospaced,plain,24
 console.font.macosx = Monaco,plain,10
 console.color = #000000
 console.output.color = #eeeeee
@@ -34,10 +36,10 @@ console.error.color = #E34C00
 
 # GUI - BUTTONS
 buttons.bgcolor = #006468
-buttons.status.font = SansSerif,plain,12
+buttons.status.font = SansSerif,plain,24
 buttons.status.color = #ffffff
 
-# GUI - LINESTATUS   
+# GUI - LINESTATUS
 linestatus.color = #ffffff
 linestatus.bgcolor = #006468
 

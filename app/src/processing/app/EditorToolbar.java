@@ -56,19 +56,19 @@ public class EditorToolbar extends JComponent implements MouseInputListener, Key
   /**
    * Width of each toolbar button.
    */
-  private static final int BUTTON_WIDTH = 27;
+  private static final int BUTTON_WIDTH = 27 * Theme.getInteger("gui.scalefactor");
   /**
    * Height of each toolbar button.
    */
-  private static final int BUTTON_HEIGHT = 32;
+  private static final int BUTTON_HEIGHT = 32 * Theme.getInteger("gui.scalefactor");
   /**
    * The amount of space between groups of buttons on the toolbar.
    */
-  private static final int BUTTON_GAP = 5;
+  private static final int BUTTON_GAP = 5 * Theme.getInteger("gui.scalefactor");
   /**
    * Size of the button image being chopped up.
    */
-  private static final int BUTTON_IMAGE_SIZE = 33;
+  private static final int BUTTON_IMAGE_SIZE = 33 * Theme.getInteger("gui.scalefactor");
 
 
   private static final int RUN = 0;
@@ -206,9 +206,9 @@ public class EditorToolbar extends JComponent implements MouseInputListener, Key
 
     /*
     // if i ever find the guy who wrote the java2d api, i will hurt him.
-     * 
+     *
      * whereas I love the Java2D API. --jdf. lol.
-     * 
+     *
     Graphics2D g2 = (Graphics2D) g;
     FontRenderContext frc = g2.getFontRenderContext();
     float statusW = (float) statusFont.getStringBounds(status, frc).getWidth();
@@ -437,7 +437,7 @@ public class EditorToolbar extends JComponent implements MouseInputListener, Key
 
 
   public Dimension getMaximumSize() {
-    return new Dimension(3000, BUTTON_HEIGHT);
+    return new Dimension(3000 * Theme.getInteger("gui.scalefactor"), BUTTON_HEIGHT);
   }
 
 
