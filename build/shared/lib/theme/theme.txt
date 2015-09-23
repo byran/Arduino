@@ -122,5 +122,5 @@ editor.comment2.style = #95a5a6,plain
 
 
 # LINE STATUS - editor line number status bar at the bottom of the screen
-linestatus.font	   = SansSerif,plain,10
-linestatus.height  = 20
+linestatus.font	   = SansSerif,plain,24
+linestatus.height  = 48
