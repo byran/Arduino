@@ -71,7 +71,7 @@
     </or>
   </condition>
 
-  <property name="ARDUINO-BUILDER-VERSION" value="1.0.0-beta12" />
+  <property name="ARDUINO-BUILDER-VERSION" value="1.0.0-beta14" />
 
   <!-- Libraries required for running arduino -->
   <fileset dir=".." id="runtime.jars">
@@ -193,6 +193,7 @@
     <download-library name="RobotIRremote" version="1.0.2"/>
     <download-library name="SpacebrewYun" version="1.0.0"/>
     <download-library name="Temboo" version="1.1.3" githubuser="temboo"/>
+    <download-library name="Esplora" version="1.0.4"/>
   </target>
 
   <macrodef name="download-library">
