@@ -105,6 +105,12 @@ public abstract class Uploader implements MessageConsumer {
     int result = -1;
 
     try {
+        Thread.sleep(1000);                 //1000 milliseconds is one second.
+    } catch(InterruptedException ex) {
+        Thread.currentThread().interrupt();
+    }
+
+    try {
       if (verbose) {
         for (String c : command)
           System.out.print(c + " ");
