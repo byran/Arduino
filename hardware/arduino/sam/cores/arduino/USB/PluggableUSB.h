@@ -35,12 +35,6 @@ typedef struct __attribute__((packed))
   uint32_t *endpointType;
 } PUSBCallbacks;
 
-typedef struct
-{
-  uint8_t interface;
-  uint8_t firstEndpoint;
-} PUSBReturn;
-
 class PUSBListNode {
 public:
   PUSBListNode *next = NULL;
@@ -55,8 +49,6 @@ int PUSB_GetInterface(uint8_t* interfaceNum);
 int PUSB_GetDescriptor(int8_t t);
 
 bool PUSB_Setup(USBSetup& setup, uint8_t i);
-
-void PUSB_Begin();
 
 #endif
 
