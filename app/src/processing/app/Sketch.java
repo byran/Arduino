@@ -463,7 +463,7 @@ public class Sketch {
 
       } else {
         // delete the file
-        if (!current.getCode().deleteFile(BaseNoGui.getBuildFolder(data))) {
+        if (!current.getCode().deleteFile(BaseNoGui.getBuildFolder(data).toPath(), Paths.get(System.getProperty("java.io.tmpdir"), "arduino_" + DigestUtils.md5Hex(getMainFilePath())))) {
           Base.showMessage(tr("Couldn't do it"),
                            I18n.format(tr("Could not delete \"{0}\"."), current.getCode().getFileName()));
           return;
@@ -652,14 +652,13 @@ public class Sketch {
     // make sure there doesn't exist a .cpp file with that name already
     // but ignore this situation for the first tab, since it's probably being
     // resaved (with the same name) to another location/folder.
-    for (SketchCode code : data.getCodes()) {
-      if (newName.equalsIgnoreCase(code.getPrettyName()) && code.isExtension("cpp")) {
+    for (int i = 1; i < data.getCodeCount(); i++) {
+      SketchCode code = data.getCode(i);
+      if (newName.equalsIgnoreCase(code.getPrettyName())) {
         Base.showMessage(tr("Error"),
-                I18n.format(
-                        tr("You can't save the sketch as \"{0}\"\n" +
-                                "because the sketch already has a .cpp file with that name."),
-                        newName
-                ));
+          I18n.format(tr("You can't save the sketch as \"{0}\"\n" +
+            "because the sketch already has a file with that name."), newName
+          ));
         return false;
       }
     }
